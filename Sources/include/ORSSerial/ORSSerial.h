@@ -25,6 +25,7 @@
 //	SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #import <ORSSerial/ORSSerialPort.h>
+#import <ORSSerial/ORSSerialPort+Attributes.h>
 #import <ORSSerial/ORSSerialPortManager.h>
 #import <ORSSerial/ORSSerialRequest.h>
 #import <ORSSerial/ORSSerialPacketDescriptor.h>
