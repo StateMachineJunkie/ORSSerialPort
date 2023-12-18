@@ -10,8 +10,8 @@
 
 @interface ORSSerialPort (Attributes)
 
-@property (nonatomic, readonly) NSDictionary *ioDeviceAttributes;
-@property (nonatomic, readonly) NSNumber *productID;
-@property (nonatomic, readonly) NSNumber *vendorID;
+@property (nonatomic, readonly, nullable) NSDictionary *ioDeviceAttributes;
+@property (nonatomic, readonly, nullable) NSNumber *productID;
+@property (nonatomic, readonly, nullable) NSNumber *vendorID;
 
 @end
