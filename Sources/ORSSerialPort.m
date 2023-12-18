@@ -612,7 +612,7 @@ static __strong NSMutableArray *allSerialPorts;
 	});
 }
 
-#pragma mark Port Propeties Methods
+#pragma mark Port Properties Methods
 
 - (void)setPortOptions;
 {
@@ -907,7 +907,7 @@ static __strong NSMutableArray *allSerialPorts;
 {
 	if (flag != _usesRTSCTSFlowControl)
 	{
-		// Turning flow control one while the port is open doesn't seem to work right,
+		// Turning flow control on while the port is open doesn't seem to work right,
 		// at least with some drivers, so close it then reopen it if needed
 		BOOL shouldReopen = self.isOpen;
 		[self close];
