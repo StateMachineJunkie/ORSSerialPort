@@ -190,7 +190,7 @@ static __strong NSMutableArray *allSerialPorts;
 		self.usesDTRDSRFlowControl = NO;
 		self.usesDCDOutputFlowControl = NO;
 		self.RTS = NO;
-		self.DTR = NO;
+		self.DTR = YES;
 	}
 	
 	[[self class] addSerialPort:self];
