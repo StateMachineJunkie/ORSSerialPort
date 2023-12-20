@@ -71,17 +71,17 @@ typedef BOOL(^ORSSerialPacketEvaluator)(NSData * __nullable inputData);
 /**
  *  Creates an initializes an ORSSerialPacketDescriptor instance using a response evaluator block.
  *
- *  This initializer can be used to creat a packet descriptor with complex packet matching
+ *  This initializer can be used to create a packet descriptor with complex packet matching
  *  rules. For most packet formats, the initializers that take prefix and suffix, or regular expression
  *  are easier to use. However, if the packet format cannot be described using a simple prefix/suffix
- *  or regular expression, a response evaulator block containing arbitrary validation code can be
+ *  or regular expression, a response evaluator block containing arbitrary validation code can be
  *  provided instead.
  *
  *  @param maxPacketLength The maximum length of a valid packet. This value _must_ be correctly specified.
  *  @param userInfo          An arbitrary userInfo object.
  *  @param responseEvaluator A block used to evaluate whether received data constitutes a valid packet.
  *
- *  @return An initizliaized ORSSerialPacketDesciptor instance.
+ *  @return An initialized ORSSerialPacketDescriptor instance.
  *
  *  @see -initWithPrefix:suffix:maximumPacketLength:userInfo:
  *  @see -initWithPrefixString:suffixString:maximumPacketLength:userInfo:
@@ -99,7 +99,7 @@ typedef BOOL(^ORSSerialPacketEvaluator)(NSData * __nullable inputData);
  *  @param packetData	An NSData instance containing a fixed sequence of bytes making up a packet.
  *  @param userInfo		An arbitrary userInfo object. May be nil.
  *
- *  @return An initizliaized ORSSerialPacketDesciptor instance.
+ *  @return An initialized ORSSerialPacketDescriptor instance.
  */
 - (instancetype)initWithPacketData:(NSData *)packetData userInfo:(nullable id)userInfo;
 
@@ -111,14 +111,14 @@ typedef BOOL(^ORSSerialPacketEvaluator)(NSData * __nullable inputData);
  *
  *  @note Either prefix or suffix may be nil, but not both. If the suffix is nil,
  *  packets will be considered to consist solely of prefix. If either value is nil, packets
- *  will be considred to consist soley of the the non-nil value.
+ *  will be considered to consist solely of the the non-nil value.
  *
  *  @param prefix   An NSData instance containing a fixed packet prefix. May be nil.
  *  @param suffix   An NSData instance containing a fixed packet suffix. May be nil.
  *  @param maxPacketLength The maximum length of a valid packet. This value _must_ be correctly specified.
  *  @param userInfo An arbitrary userInfo object. May be nil.
  *
- *  @return An initizliaized ORSSerialPacketDesciptor instance.
+ *  @return An initialized ORSSerialPacketDescriptor instance.
  *
  *  @see -initWithPrefixString:suffixString:userInfo:
  */
@@ -136,14 +136,14 @@ typedef BOOL(^ORSSerialPacketEvaluator)(NSData * __nullable inputData);
  *
  *  @note Either prefixString or suffixString may be nil, but not both. If the suffix is nil,
  *  packets will be considered to consist solely of prefix. If either value is nil, packets
- *  will be considred to consist soley of the the non-nil value.
+ *  will be considered to consist solely of the the non-nil value.
  *
  *  @param prefixString A fixed packet prefix string. May be nil.
  *  @param suffixString A fixed packet suffix string. May be nil.
  *  @param maxPacketLength The maximum length of a valid packet. This value _must_ be correctly specified.
  *  @param userInfo     An arbitrary userInfo object. May be nil.
  *
- *  @return An initizliaized ORSSerialPacketDesciptor instance.
+ *  @return An initialized ORSSerialPacketDescriptor instance.
  *
  *  @see -initWithPrefix:suffix:maximumPacketLength:userInfo:
  */
@@ -216,7 +216,7 @@ typedef BOOL(^ORSSerialPacketEvaluator)(NSData * __nullable inputData);
 @property (nonatomic, strong, readonly, nullable) NSRegularExpression *regularExpression;
 
 /**
- *  The maximum lenght of a packet described by the receiver.
+ *  The maximum length of a packet described by the receiver.
  */
 @property (nonatomic, readonly) NSUInteger maximumPacketLength;
 
